@@ -7,8 +7,8 @@ import tdt4250.conversion.util.Unit;
 
 @Component(
 		property = {
-				Unit.NAME + "=m",
-				Unit.PATH + "=tdt4250.conversion.minute#/tdt4250/conversion/minute/minuteconversion.txt"}
+				Unit.NAME + "=d",
+				Unit.PATH + "=tdt4250.conversion.day#/tdt4250/conversion/day/dayconversion.txt"}
 		)
 
 public class  Day extends Unit implements ConversionUnit{

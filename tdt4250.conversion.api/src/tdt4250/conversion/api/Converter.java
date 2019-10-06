@@ -30,10 +30,10 @@ public class Converter {
 		Optional<ConversionUnit> cUnit = cUnits
 				.stream()
 				.filter((cu) -> {
-					return cu.getCurrentUnit() == currentUnit;}).findAny();
+					return cu.getCurrentUnit().equals(currentUnit);}).findAny();
 		// if current unit does not exist, send out default message
 		if(!cUnit.isPresent()) {
-			result = new UnitConversionResult(-1.0f,convertionSuccess, DEFAULT_MESSAGE);
+			return new UnitConversionResult(-1.0f,convertionSuccess, DEFAULT_MESSAGE + "a");
 		}
 		
 		//create list of all formulas that belongs to the current "from-unit"
@@ -47,21 +47,22 @@ public class Converter {
 						return f.substring(0,1).equals(requestedUnit);}).findAny();
 			// if requested unit does not exist, send out default message
 			if(!formula.isPresent()) {
-				result = new UnitConversionResult(-1.0f,convertionSuccess, DEFAULT_MESSAGE);
+				return new UnitConversionResult(-1.0f,convertionSuccess, DEFAULT_MESSAGE + "b");
 			} else {
 				//if current and requested unit exist: convert value
 				ScriptEngineManager manager = new ScriptEngineManager();
 				ScriptEngine engine = manager.getEngineByName("JavaScript");
-				String convertionString = formula.toString().substring(2, formula.toString().length()).replaceAll(currentUnit, Float.toString(inputValue));
+				String convertionString = formula.get().substring(2, formula.get().length()).replaceAll(currentUnit, Float.toString(inputValue));
 				convertionSuccess = true;
 				try {
-					result = new UnitConversionResult(Float.valueOf(engine.eval(convertionString).toString()),convertionSuccess,"Unit convertion succesfull!");
+					float newValue = Float.valueOf(engine.eval(convertionString).toString());
+					result = new UnitConversionResult(newValue,convertionSuccess,"Unit " + currentUnit + " converted into " + requestedUnit + " with value " + inputValue + " has new value: " + newValue );
 				} catch (NumberFormatException e) {
 					// TODO Auto-generated catch block
-					result = new UnitConversionResult(-1, false, DEFAULT_MESSAGE);
+					result = new UnitConversionResult(-1, false, DEFAULT_MESSAGE + "c");
 				} catch (ScriptException e) {
 					// TODO Auto-generated catch block
-					result = new UnitConversionResult(-1, false, DEFAULT_MESSAGE);
+					result = new UnitConversionResult(-1, false, DEFAULT_MESSAGE + "d");
 				}
 			}
 		}

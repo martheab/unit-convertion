@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.conversion.second" increment="1569786099941">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.conversion.second" increment="1570354730559">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.conversion.second"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201909291941" type="Version"/>
+      <attribute name="version" value="0.0.0.201910060938" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201909291941" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201910060938" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.conversion.second"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201909291941" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201910060938" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.conversion.second"/>
     </capability>
     <capability namespace="osgi.service">
-      <attribute name="objectClass" value="tdt4250.conversion.api.Conversion" type="List&lt;String&gt;"/>
+      <attribute name="objectClass" value="tdt4250.conversion.api.ConversionUnit" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="3402" type="Long"/>
+      <attribute name="size" value="3417" type="Long"/>
       <attribute name="url" value="generated/tdt4250.conversion.second.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="02B89F9098A510E4056B907825404384FDF6AE63FD32E7C898965753D56FD0EA"/>
+      <attribute name="osgi.content" value="F15C23A65D0464DF0AB199416988B69DCC85912C31CBF368F6F3791D6BF8D90C"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/Marthe/eclipse-workspace2"/>

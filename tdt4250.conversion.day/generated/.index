@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.conversion.day" increment="1569786101569">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="tdt4250.conversion.day" increment="1570355508869">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="tdt4250.conversion.day"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" value="0.0.0.201909291941" type="Version"/>
+      <attribute name="version" value="0.0.0.201910060951" type="Version"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
-      <attribute name="bundle-version" value="0.0.0.201909291941" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201910060951" type="Version"/>
       <attribute name="osgi.wiring.bundle" value="tdt4250.conversion.day"/>
     </capability>
     <capability namespace="osgi.wiring.host">
-      <attribute name="bundle-version" value="0.0.0.201909291941" type="Version"/>
+      <attribute name="bundle-version" value="0.0.0.201910060951" type="Version"/>
       <attribute name="osgi.wiring.host" value="tdt4250.conversion.day"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" value="tdt4250.conversion.api.ConversionUnit" type="List&lt;String&gt;"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="size" value="3359" type="Long"/>
+      <attribute name="size" value="3343" type="Long"/>
       <attribute name="url" value="generated/tdt4250.conversion.day.jar"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
-      <attribute name="osgi.content" value="7A247C75CB4EE915956B728B04F2A8C9D64EEE8BF0F631E4143168B39314E0C1"/>
+      <attribute name="osgi.content" value="D5EF864AFAC738DD4D80A5FAC4F6FE9F92021A951D5952644460CEC0029195F9"/>
     </capability>
     <capability namespace="bndtools.workspace">
       <attribute name="bndtools.workspace" value="file:/Users/Marthe/eclipse-workspace2"/>

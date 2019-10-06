@@ -1,8 +1,7 @@
 package tdt4250.conversion.minute;
 
 import org.osgi.service.component.annotations.*;
-
-import tdt4250.conversion.api.Conversion;
+import tdt4250.conversion.api.ConversionUnit;
 import tdt4250.conversion.util.Unit;
 
 @Component(
@@ -11,6 +10,6 @@ import tdt4250.conversion.util.Unit;
 				Unit.PATH + "=tdt4250.conversion.minute#/tdt4250/conversion/minute/minuteconversion.txt"}
 		)
 
-public class Minute extends Unit implements Conversion{
+public class Minute extends Unit implements ConversionUnit{
 
 }

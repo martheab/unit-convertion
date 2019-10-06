@@ -12,14 +12,14 @@ import org.osgi.framework.BundleContext;
 
 
 import org.osgi.service.component.annotations.*;
-import tdt4250.conversion.api.Conversion;
+import tdt4250.conversion.api.ConversionUnit;
 
 @Component(
 		configurationPolicy = ConfigurationPolicy.REQUIRE
 		)
 
 
-public class Unit implements Conversion{
+public class Unit implements ConversionUnit{
 	
 	public static final String NAME = "name";
 	public static final String PATH = "path";
@@ -63,23 +63,10 @@ public class Unit implements Conversion{
 
 	}
 	
-	
 	@Override
 	public String getCurrentUnit() {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getRequestedUnit() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public float getValue(float inputValue) {
-		// TODO Auto-generated method stub
-		return 0;
+		return name;
 	}
 	
 	public List<String> getConversionFormulas(){
@@ -95,6 +82,9 @@ public class Unit implements Conversion{
 		}
 		return formulaList;
 	}
+
+
+
 
 
 }
